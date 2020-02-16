@@ -1,0 +1,5 @@
+user_location.settings:
+  title: 'User Location settings'
+  description: 'Configure User Location settings.'
+  route_name: user_location.settings
+  parent: user.admin_index

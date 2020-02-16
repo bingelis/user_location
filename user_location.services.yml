@@ -1,0 +1,4 @@
+services:
+  user_location.municipality_provider:
+    class: Drupal\user_location\MunicipalityProvider
+    arguments: ['@http_client_factory', '@config.factory', '@cache.default', '@datetime.time']

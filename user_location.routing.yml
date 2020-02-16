@@ -1,0 +1,7 @@
+user_location.settings:
+  path: '/admin/config/people/user-location'
+  defaults:
+    _title: 'User Location settings'
+    _form: Drupal\user_location\Form\SettingsForm
+  requirements:
+    _permission: 'administer site configuration'

@@ -1,0 +1,26 @@
+<?php
+
+use Drupal\Core\Link;
+
+/**
+ * Implements hook_install().
+ */
+function user_location_install() {
+  \Drupal\Core\Entity\Entity\EntityViewDisplay::load('user.user.default')
+    ->setComponent('field_location', [
+      'type' => 'location_formatter',
+      'region' => 'content',
+    ])
+    ->save();
+
+  \Drupal\Core\Entity\Entity\EntityFormDisplay::load('user.user.default')
+    ->setComponent('field_location', [
+      'type' => 'location_widget',
+      'region' => 'content',
+    ])
+    ->save();
+
+  \Drupal::messenger()->addStatus(t('Please provide an API key for @settings_page.', [
+    '@settings_page' => Link::createFromRoute(t('Municipality service'), 'user_location.settings')->toString()
+  ]));
+}

@@ -1,0 +1,11 @@
+name: User Location
+description: Adds User Location field to user profile.
+
+type: module
+core: 8.x
+php: 7.0
+
+dependencies:
+  - drupal:user
+
+configure: user_location.settings

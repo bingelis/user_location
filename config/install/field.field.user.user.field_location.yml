@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_location
+  module:
+    - user
+    - user_location
+id: user.user.field_location
+field_name: field_location
+entity_type: user
+bundle: user
+label: Location
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    municipality: ''
+    city: ''
+default_value_callback: ''
+settings: {  }
+field_type: location
